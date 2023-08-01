@@ -1,0 +1,19 @@
+[package]
+name = "todo-kernel"
+version = "0.1.0"
+edition = "2021"
+authors = ["Pierre Tondereau <pierre.tondereau@gmail.com>"]
+description = "a simple todo list kernel for the tezos smart rollup"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde-json-wasm = "0.5"
+tezos_data_encoding = { version = "0.5" }
+tezos-smart-rollup = "0.2"
+tezos-smart-rollup-host = "0.2"
+tezos-smart-rollup-mock = "0.2"
+thiserror = "1.0"
